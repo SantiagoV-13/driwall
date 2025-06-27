@@ -1,0 +1,984 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+:root {
+    --primary-blue: #0A3B5C;
+    --primary-yellow: #FFB800;
+    --hover-yellow: #e6a600;
+    --text-dark: #333333;
+    --background-light: #ffffff;
+}
+
+.navbar {
+    background-color: var(--background-light);
+    border-bottom: 3px solid var(--primary-yellow);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;  /* This will push items to opposite ends */
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    margin-right: auto;  /* Pushes the logo to the left */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-left: auto;  /* Pushes the navigation to the right */
+}
+
+.logo {
+    height: 70px;  /* Increased height */
+    width: auto;
+    padding: 5px;  /* Added padding around the logo */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);  /* Subtle hover effect */
+}
+
+.nav-links a {
+    color: var(--primary-blue);
+}
+
+.nav-links a:hover {
+    color: var(--primary-yellow);
+}
+
+.hero {
+    background: linear-gradient(rgba(10, 59, 92, 0.85), rgba(10, 59, 92, 0.85)), url('assets/hero-bg.jpg');
+}
+
+.cta-button {
+    background-color: var(--primary-yellow);
+    color: var(--primary-blue);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(255, 184, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--hover-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 184, 0, 0.4);
+}
+
+.servicio-card {
+    border: 2px solid var(--primary-yellow);
+    background-color: var(--background-light);
+}
+
+.servicio-card:hover {
+    border-color: var(--primary-blue);
+}
+
+.servicio-card h3 {
+    color: var(--primary-blue);
+}
+
+footer {
+    background-color: var(--primary-blue);
+    border-top: 3px solid var(--primary-yellow);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    background-color: #25D366;  /* WhatsApp green color */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;  /* More rounded corners */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #128C7E;  /* Darker WhatsApp green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.cta-button i {
+    font-size: 1.2rem;
+}
+
+.servicios {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.servicios h2 {
+    margin-bottom: 3rem;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicio-card {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contactos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-contactos a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-contactos a:hover {
+    color: var(--primary-yellow);
+}
+
+.footer-contactos i {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+    .footer-contactos {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}
+
+/* Eliminar o reemplazar esta regla */
+@media (max-width: 768px) {
+    /* Eliminar esta línea que está causando el problema */
+    /* .nav-links {
+        display: none;
+    } */
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Estilos para páginas internas */
+.productos-page, .servicios-page, .tienda-page, .contacto-page {
+    padding: 120px 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para productos */
+.productos-grid, .tienda-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.producto-card img, .producto-tienda img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilos para servicios */
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.servicio-detalle {
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Estilos para tienda */
+.producto-tienda {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 1rem 0;
+}
+
+.comprar-btn {
+    background: #FFB800;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comprar-btn:hover {
+    background: #ac7b01;
+}
+
+/* Estilos para contacto */
+.contacto-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contacto-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    background: #FFB800;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ac7b01;
+}
+
+.contacto-info {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Aseguramos que el body ocupe al menos toda la altura de la ventana */
+html, body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* El contenido principal debe expandirse para empujar el footer hacia abajo */
+main {
+    flex: 1;
+}
+
+/* Estilos específicos para la página de productos */
+.productos-page {
+    padding: 120px 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 120px - 50px); /* Altura de la ventana menos navbar y footer */
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer al final */
+    background-color: var(--primary-blue);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Estilos para productos - Diseño de mosaico en Tres Columnas Fijas
+
+Voy a modificar el CSS para que los productos se muestren específicamente en tres columnas en lugar de un diseño adaptable. Aquí está el código actualizado: */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Exactamente 3 columnas */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: var(--primary-yellow);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.producto-card:hover img {
+    transform: scale(1.05);
+}
+
+.producto-card h3 {
+    color: var(--primary-blue);
+    margin: 1rem 0 0.5rem;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.producto-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-dark);
+    flex-grow: 1;
+}
+
+/* Efecto de superposición al pasar el cursor */
+.producto-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 59, 92, 0) 70%, rgba(10, 59, 92, 0.1) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.producto-card:hover::after {
+    opacity: 1;
+}
+
+/* Ajuste para pantallas medianas - 2 columnas */
+@media (max-width: 900px) and (min-width: 601px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ajuste para pantallas pequeñas - 1 columna */
+@media (max-width: 600px) {
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: var(--primary-yellow);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.producto-card:hover img {
+    transform: scale(1.05);
+}
+
+.producto-card h3 {
+    color: var(--primary-blue);
+    margin: 1rem 0 0.5rem;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+}
+
+.producto-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-dark);
+    flex-grow: 1;
+}
+
+/* Efecto de superposición al pasar el cursor */
+.producto-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(10, 59, 92, 0) 70%, rgba(10, 59, 92, 0.1) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.producto-card:hover::after {
+    opacity: 1;
+}
+
+/* Estilos para la sección de trabajos realizados */
+.trabajos-realizados {
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.trabajos-realizados h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-blue);
+}
+
+.trabajos-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trabajos-sidebar {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.trabajos-descripcion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.trabajos-descripcion h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.trabajos-descripcion p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.trabajo-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trabajo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.trabajo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.trabajo-item:hover img {
+    transform: scale(1.1);
+}
+
+.trabajo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(10, 59, 92, 0.8), transparent);
+    padding: 1rem;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+.trabajo-overlay h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.ver-mas-btn {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    color: var(--primary-blue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px rgba(255, 184, 0, 0.3);
+}
+
+.ver-mas-btn:hover {
+    background-color: var(--hover-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 184, 0, 0.4);
+}
+
+/* Responsive para la sección de trabajos */
+@media (max-width: 900px) {
+    .trabajos-container {
+        flex-direction: column;
+    }
+    
+    .trabajos-sidebar {
+        order: 2;
+    }
+    
+    .trabajos-descripcion {
+        order: 1;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .ver-mas-btn {
+        align-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .trabajos-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para el menú hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--primary-blue);
+    transition: all 0.3s ease;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--background-light);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        margin: 0;
+        padding: 2rem;
+        z-index: 1000;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+    
+    /* Animación para el botón hamburguesa */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Ajuste para el hero y otras secciones */
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    /* **************************************************** */
+/* ESTILOS DEL SPINNER DE CARGA */
+/* **************************************************** */
+
+    #loader-wrapper {
+        /* ... Tus estilos actuales ... */
+        opacity: 1 !important;   /* <--- Agrega esto temporalmente */
+        /* ... el resto de tus estilos ... */
+        position: fixed; /* Fijo en la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-light); /* Usa tu variable de color de fondo claro */
+        /* Asegúrate de que el fondo sea ligeramente transparente para un efecto más suave si lo deseas */
+        /* background-color: rgba(255, 255, 255, 0.9); */
+        display: flex;
+        flex-direction: column; /* Para centrar el logo y el texto */
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Asegura que esté por encima de todo */
+        transition: opacity 0.5s ease-out; /* Para un desvanecimiento suave al ocultarse */
+    }
+
+    .loader {
+        width: 120px; /* Tamaño del contenedor del logo */
+        height: 120px;
+        /* !!!!!!!! RUTA CORRECTA A TU LOGO !!!!!!!! */
+        /* Si tu logo está en 'assets/logo.png' como en tu HTML, usa esa ruta */
+        background-image: url('../assets/logo-sf.png'); /* <--- CORREGIR ESTA LÍNEA */
+        /* Si el archivo que me pasaste `logo.jpg` está en la misma carpeta que `styles.css`
+        y quieres usar ese, entonces `url('logo.jpg')` estaría bien.
+        Pero tu HTML apunta a `assets/logo.png`. ¡Asegúrate de que coincida!
+        */
+        background-size: contain; /* Asegura que el logo se vea completo dentro del contenedor */
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: bounce 1.5s infinite ease-in-out; /* Animación de rebote */
+    }
+
+    /* Opcional: Si prefieres la animación de rotación para el logo */
+    /*
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    */
+
+    .loading-text {
+        margin-top: 20px;
+        font-size: 1.5em;
+        color: var(--text-dark); /* Usa tu variable de color de texto oscuro */
+        animation: pulse 1.5s infinite; /* Animación de pulsación para el texto */
+    }
+
+    /* Definición de las animaciones */
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px); /* El logo sube 20px */
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(0.98);
+        }
+    }
+    
+}
+
+    /* **************************************************** */
+/* ESTILOS DEL SPINNER DE CARGA */
+/* **************************************************** */
+
+    #loader-wrapper {
+        /* ... Tus estilos actuales ... */
+        opacity: 1 !important;   /* <--- Agrega esto temporalmente */
+        /* ... el resto de tus estilos ... */
+        position: fixed; /* Fijo en la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--background-light); /* Usa tu variable de color de fondo claro */
+        /* Asegúrate de que el fondo sea ligeramente transparente para un efecto más suave si lo deseas */
+        /* background-color: rgba(255, 255, 255, 0.9); */
+        display: flex;
+        flex-direction: column; /* Para centrar el logo y el texto */
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Asegura que esté por encima de todo */
+        transition: opacity 0.5s ease-out; /* Para un desvanecimiento suave al ocultarse */
+    }
+
+    .loader {
+        width: 120px; /* Tamaño del contenedor del logo */
+        height: 120px;
+        /* !!!!!!!! RUTA CORRECTA A TU LOGO !!!!!!!! */
+        /* Si tu logo está en 'assets/logo.png' como en tu HTML, usa esa ruta */
+        background-image: url('../assets/logo-sf.png'); /* <--- CORREGIR ESTA LÍNEA */
+        /* Si el archivo que me pasaste `logo.jpg` está en la misma carpeta que `styles.css`
+        y quieres usar ese, entonces `url('logo.jpg')` estaría bien.
+        Pero tu HTML apunta a `assets/logo.png`. ¡Asegúrate de que coincida!
+        */
+        background-size: contain; /* Asegura que el logo se vea completo dentro del contenedor */
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: bounce 1.5s infinite ease-in-out; /* Animación de rebote */
+    }
+
+    /* Opcional: Si prefieres la animación de rotación para el logo */
+    /*
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    */
+
+    .loading-text {
+        margin-top: 20px;
+        font-size: 1.5em;
+        color: var(--text-dark); /* Usa tu variable de color de texto oscuro */
+        animation: pulse 1.5s infinite; /* Animación de pulsación para el texto */
+    }
+
+    /* Definición de las animaciones */
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px); /* El logo sube 20px */
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.7;
+            transform: scale(0.98);
+        }
+    }
+/* Estilos para la página de detalle de producto */
+.producto-detalle-page {
+    padding: 120px 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.producto-detalle-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.producto-info h1 {
+    color: var(--primary-blue);
+    margin-bottom: 2rem;
+}
+
+.producto-info h2 {
+    color: var(--primary-blue);
+    margin: 1.5rem 0 1rem;
+}
+
+.caracteristicas ul,
+.aplicaciones ul {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas li,
+.aplicaciones li {
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.caracteristicas i,
+.aplicaciones i {
+    color: var(--primary-yellow);
+}
+
+.descripcion p {
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Hacer las tarjetas de productos clickeables */
+.producto-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .producto-detalle-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
